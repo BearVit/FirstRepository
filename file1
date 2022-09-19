@@ -1,1 +1,7 @@
-Hello world!!!
+Vas, [24.02.2022 17:55]
+./pssh rt-*-*-sdp0* "sudo sed -i '/^[^#].*PaymentSystem\/listCards/s/^/#/' /opt/smartlabs/nginx/conf/conf.d/locations-sdp-backend.conf"
+./pssh rt-*-*-sdp0* "sudo sed -i '/^[^#].*PaymentSystemNc\/getRuleList/s/^/#/' /opt/smartlabs/nginx/conf/conf.d/locations-sdp-backend.conf"
+./pssh rt-*-*-sdp0* "sudo /etc/init.d/nginx reload"
+
+Открыть 
+./pssh rt-*-*-sdp0* "sudo sed -i 's/^#//' /opt/smartlabs/nginx/conf/conf.d/locations-sdp-backend.conf"
